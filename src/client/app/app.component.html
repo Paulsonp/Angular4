@@ -1,3 +1,38 @@
-<sd-toolbar></sd-toolbar>
-<sd-navbar></sd-navbar>
-<router-outlet></router-outlet>
+<md-sidenav-container fullscreen>
+    <md-toolbar>
+        <div fxFlex="100%" fxLayout="row" fxLayoutAlign="space-around center" style="box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.13), 0 1px 2px 0 rgba(0, 0, 0, 0.24);height:56px" id="floating-toolbar">
+            <div fxFlex="70%" class="marginRight-logo">
+                <button (click)="sidenav.open()"></button>
+                <p class="admin_name">
+                    <img src="" style="width:140px;margin-top: 6px;">
+                </p>
+            </div>
+
+            <div fxFlex="30%" class="admin_details" fxLayout="row" fxLayoutAlign="end center">
+
+            </div>
+        </div>
+    </md-toolbar>
+
+    <md-sidenav #sidenav mode="over" class="app-sidenav">
+        <div fxLayout="row" class="logo-div">
+
+            <p class="admin_name" style="font-size:16px;padding-left: 1.1em;">
+                <img src="">
+            </p>
+        </div>
+
+        <md-list class="md-list" style="padding-top: 0px; position: relative;
+    left: -2.5em;">
+            <nav>
+                <a [routerLink]="['/']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">HOME</a>
+                <a [routerLink]="['/about']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">ABOUT</a>
+            </nav>
+        </md-list>
+
+    </md-sidenav>
+    <div>
+        <router-outlet>
+        </router-outlet>
+    </div>
+</md-sidenav-container>

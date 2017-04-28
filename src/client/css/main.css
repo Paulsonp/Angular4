@@ -40,6 +40,18 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+.app-sidenav {
+    width: 200px;
+    background: #095871;
+    transition: 0.2s !important;
+    transition-timing-function: linear !important;
+    color: #fff;
+}
+
+.mat-toolbar {
+    padding: 0px !important;
+}
+
 p {
     font-weight: 400;
     letter-spacing: 0.01em;
